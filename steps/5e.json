@@ -1,0 +1,9 @@
+{
+  "summary": "The bat's wing fragment pulses with dark energy... then explodes into soul-sucking moths. Your last thought: 'Maybe don't collect biomatter from hellbeasts?'",
+  "choices": [
+    {
+      "text": "Respawn as entrance (swear off cursed souvenirs)",
+      "next": "2"
+    }
+  ]
+}

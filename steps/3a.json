@@ -1,0 +1,17 @@
+{
+  "summary": "Your dagger severs a ghoul's arm in a spray of black ichor. The dismembered limb crawls toward you, fingers snapping like crab claws! The remaining ghouls shriek in unholy rage.",
+  "choices": [
+    {
+      "text": "Roll behind stone altar",
+      "next": "3e"
+    },
+    {
+      "text": "Lunge at the jawless ghoul",
+      "next": "3f"
+    },
+    {
+      "text": "Grab severed arm as weapon",
+      "next": "3g"
+    }
+  ]
+}

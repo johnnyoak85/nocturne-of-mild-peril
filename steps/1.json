@@ -1,0 +1,17 @@
+{
+  "summary": "Beneath a storm-wracked sky, Castle Dracula looms before you. Its spires pierce the heavens like bone shards. The drawbridge lies lowered in twisted invitation. To the west, a crumbling mausoleum whispers of forgotten paths. Pale moonlight glints off something metallic in the mud.",
+  "choices": [
+    {
+      "text": "Enter through the main gate",
+      "next": "2"
+    },
+    {
+      "text": "Investigate the mausoleum",
+      "next": "99"
+    },
+    {
+      "text": "Sneak through the stables",
+      "next": "99"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "summary": "The ornate candelabra shatters on impact. You're left holding a golden chicken figurine - the castle's idea of 'decorative lighting'. The ghouls pause... then laugh through rotting lungs.",
+  "choices": [
+    {
+      "text": "Try dagger (proper weapon this time)",
+      "next": "3a"
+    },
+    {
+      "text": "Hurl chicken statue in desperation",
+      "next": "3f"
+    }
+  ]
+}

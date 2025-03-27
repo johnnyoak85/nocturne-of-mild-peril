@@ -1,0 +1,9 @@
+{
+  "summary": "The severed arm flips you off before crushing your windpipe. The ghouls howl with laughter, one etching 'LOSER' on the floorboards using your blood as ink, another makes the shape of an L on its forehead.",
+  "choices": [
+    {
+      "text": "Respawn (vow to skip gym day forever)",
+      "next": "2.json"
+    }
+  ]
+}

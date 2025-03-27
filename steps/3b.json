@@ -1,0 +1,9 @@
+{
+  "summary": "The vial erupts in celestial flames! Ghouls melt like candle wax, their final screams forming rude words in Latin. A staircase appears, its steps cleared of ectoplasm.",
+  "choices": [
+    {
+      "text": "Move towards smoking staircase",
+      "next": "4"
+    }
+  ]
+}

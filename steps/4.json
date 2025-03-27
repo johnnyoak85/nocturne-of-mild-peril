@@ -1,0 +1,13 @@
+{
+  "summary": "You reach a spiral staircase. Bat screeches echo above. The steps are slick with... something best unexamined.",
+  "choices": [
+    {
+      "text": "Climb stairs",
+      "next": "5"
+    },
+    {
+      "text": "Descend stairs",
+      "next": "99"
+    }
+  ]
+}

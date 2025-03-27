@@ -1,0 +1,10 @@
+{
+  "summary": "The dismembered arm whips around like a macabre marionette, its fingernails carving gouges in your armor. In a final act of betrayal, it latches onto your throat while the ghouls cheer - their first team-building exercise.",
+  "choices": [
+    {
+      "text": "Respawn at entrance (and swear off improv weapons)",
+      "next": "2"
+    },
+    { "text": "Demand arm wrestling rematch", "next": "3h" }
+  ]
+}

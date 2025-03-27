@@ -1,0 +1,13 @@
+{
+  "summary": "Your blade sinks into rubbery flesh! The bat hurls you against a wall with a wing buffet. It's wounded but enraged - one eye now glows hellish red.",
+  "choices": [
+    {
+      "text": "Go for the glowing eye",
+      "next": "5d"
+    },
+    {
+      "text": "Try vampire negotiation",
+      "next": "5c"
+    }
+  ]
+}

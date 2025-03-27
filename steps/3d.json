@@ -1,0 +1,9 @@
+{
+  "summary": "'We come in peace!' you declare. The ghouls freeze. Then their leader belches forth: 'PEACE WAS NEVER AN OPTION!' They descend upon you, cutlery crown gleaming.",
+  "choices": [
+    {
+      "text": "Respawn at entrance (with newfound wisdom)",
+      "next": "2"
+    }
+  ]
+}

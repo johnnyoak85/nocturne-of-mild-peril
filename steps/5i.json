@@ -1,0 +1,9 @@
+{
+  "summary": "Your blade finds the chink in its armor! The bat plummets, crash-landing in the castle moat. You wash ashore clutching a fang the size of your leg.",
+  "choices": [
+    {
+      "text": "Use fang as canoe paddle",
+      "next": "5j"
+    }
+  ]
+}

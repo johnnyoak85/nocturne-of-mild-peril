@@ -1,0 +1,13 @@
+{
+  "summary": "Flames reflect in the bat's massive pupils. It recoils, crashing into stone pillars. Dust rains down as the ceiling groans ominously.",
+  "choices": [
+    {
+      "text": "Press the advantage",
+      "next": "5f"
+    },
+    {
+      "text": "Dodge falling debris",
+      "next": "5g"
+    }
+  ]
+}

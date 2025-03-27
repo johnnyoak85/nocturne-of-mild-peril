@@ -1,0 +1,13 @@
+{
+  "summary": "You leap onto the bat's back, torch in teeth. It crashes through a stained glass window, carrying you into stormy skies. Lightning flashes nearby.",
+  "choices": [
+    {
+      "text": "Ride it out",
+      "next": "5h"
+    },
+    {
+      "text": "Stab between wing joints",
+      "next": "5i"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "summary": "Three rotting ghouls drop from the ceiling! Their leader wields a rusty meat cleaver. One is missing its jaw.",
+  "choices": [
+    {
+      "text": "Swing silver dagger",
+      "next": "3a"
+    },
+    {
+      "text": "Throw holy water",
+      "next": "3b"
+    },
+    {
+      "text": "Use candelabra as weapon",
+      "next": "3c"
+    },
+    {
+      "text": "Try ghoul diplomacy",
+      "next": "3d"
+    }
+  ]
+}

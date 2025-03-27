@@ -1,0 +1,9 @@
+{
+  "summary": "Coming soon...",
+  "choices": [
+    {
+      "text": "Restart",
+      "next": "1"
+    }
+  ]
+}

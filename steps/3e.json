@@ -1,0 +1,17 @@
+{
+  "summary": "You tumble behind a crumbling pillar as the ghoul's cleaver embeds in stone. The blade quivers inches from your nose, ancient blood dripping onto your boots.",
+  "choices": [
+    {
+      "text": "Throw holy water",
+      "next": "3b"
+    },
+    {
+      "text": "Try ghoul diplomacy",
+      "next": "3d"
+    },
+    {
+      "text": "Sprint for the staircase",
+      "next": "4"
+    }
+  ]
+}

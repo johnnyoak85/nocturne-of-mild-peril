@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Text Adventure</title>
+    <title>Castlevania: Nocturne of Mild Peril</title>
     <style>
         body {
             background-color: #222222;
@@ -22,60 +22,115 @@
             text-align: center;
         }
 
+        #story-text {
+            white-space: pre-wrap;
+            overflow: hidden;
+            margin: 2rem 0;
+            min-height: 100px;
+            font-size: large;
+        }
+
         .choice-btn {
-            background: #333;
-            border: 1px solid #FFD700;
+            background: none;
+            border: none;
             color: #FFD700;
-            padding: 10px 20px;
-            margin: 10px;
+            padding: 10px;
+            margin: 5px;
             cursor: pointer;
-            transition: 0.3s;
+            opacity: 0;
+            font-family: Consolas, Monaco, monospace;
+            font-size: medium;
+            transition:
+                opacity 0.5s ease-in-out,
+                background-color 0.3s,
+                color 0.3s;
         }
 
         .choice-btn:hover {
             background: #FFD700;
             color: #222222;
         }
+
+        @keyframes typing {
+            from {
+                width: 0
+            }
+
+            to {
+                width: 100%
+            }
+        }
     </style>
 </head>
 
 <body>
     <div id="game-container">
-        <h1>Text Adventure</h1>
+        <h2>Castlevania: Nocturne of Mild Peril</h2>
         <div id="story-text"></div>
         <div id="choices"></div>
     </div>
 
     <script>
-        // Game state
-        let currentStep = 'step1.json';
+        let currentStep = '1';
+        let typingInterval;
 
-        // Load game content
         async function loadStep(stepFile) {
             try {
-                const response = await fetch(stepFile);
+                const response = await fetch(`steps/${stepFile}.json`);
+                console.log(response)
                 const stepData = await response.json();
 
-                document.getElementById('story-text').innerHTML = stepData.summary;
+                // Clear existing content
+                document.getElementById('story-text').innerHTML = '';
+                document.getElementById('choices').innerHTML = '';
 
-                const choicesContainer = document.getElementById('choices');
-                choicesContainer.innerHTML = '';
+                // Start typewriter effect
+                typewriterEffect(stepData.summary, stepData.choices);
 
-                stepData.choices.forEach(choice => {
-                    const button = document.createElement('button');
-                    button.className = 'choice-btn';
-                    button.textContent = choice.text;
-                    button.onclick = () => {
-                        currentStep = choice.nextStep;
-                        loadStep(choice.nextStep);
-                    };
-                    choicesContainer.appendChild(button);
-                });
             } catch (error) {
                 console.error('Error loading step:', error);
                 document.getElementById('story-text').innerHTML =
                     'The adventure has hit a snag. Please try again later.';
             }
+        }
+
+        function typewriterEffect(text, choices) {
+            const storyElement = document.getElementById('story-text');
+            let index = 0;
+
+            // Clear any existing animation
+            clearInterval(typingInterval);
+
+            typingInterval = setInterval(() => {
+                storyElement.innerHTML = text.slice(0, index);
+                index++;
+
+                if (index > text.length) {
+                    clearInterval(typingInterval);
+                    showChoices(choices);
+                }
+            }, 35); // Adjust typing speed here
+        }
+
+        function showChoices(choices) {
+            const choicesContainer = document.getElementById('choices');
+
+            choices.forEach((choice, index) => {
+                const button = document.createElement('button');
+                button.className = 'choice-btn';
+                button.textContent = choice.text;
+                button.style.transitionDelay = `${index * 0.1}s`;
+                button.onclick = () => {
+                    currentStep = choice.next;
+                    loadStep(choice.next);
+                };
+
+                choicesContainer.appendChild(button);
+                // Trigger fade-in
+                setTimeout(() => {
+                    button.style.opacity = '1';
+                }, 75);
+            });
         }
 
         // Start the game

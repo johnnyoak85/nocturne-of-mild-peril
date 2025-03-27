@@ -1,0 +1,17 @@
+{
+  "summary": "The colossal bat unfurls wings spanning the vaulted ceiling. Its ultrasonic screech shatters stained glass, raining shards that cut your cheeks. The stench of centuries-old blood wafts from its maw.",
+  "choices": [
+    {
+      "text": "Thrust silver dagger upward",
+      "next": "5a"
+    },
+    {
+      "text": "Swing torch in defensive arcs",
+      "next": "5b"
+    },
+    {
+      "text": "Attempt 'Batrachian Night-Speech'",
+      "next": "5c"
+    }
+  ]
+}

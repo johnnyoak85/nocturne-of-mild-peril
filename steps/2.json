@@ -1,0 +1,9 @@
+{
+  "summary": "Dusty armor lines the walls. A giant chandelier sways. At the far end, stairs lead upward. The air smells like wet wolf.",
+  "choices": [
+    {
+      "text": "Advance toward stairs",
+      "next": "3"
+    }
+  ]
+}

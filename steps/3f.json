@@ -1,0 +1,13 @@
+{
+  "summary": "Your heroic charge ends with three ghouls on your back. As they debate whether to eat your liver or spleen first, you note the ceiling frescoes could use restoration.",
+  "choices": [
+    {
+      "text": "Accept Michelin-starred death",
+      "next": "2"
+    },
+    {
+      "text": "Beg for last words",
+      "next": "3d"
+    }
+  ]
+}
