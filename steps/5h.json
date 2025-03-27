@@ -2,8 +2,8 @@
   "summary": "As you breach the thundercloud, the bat becomes a living lightning rod. Your final sight: skeleton visible through flesh like some macabre X-ray. The castle gets free power for a week.",
   "choices": [
     {
-      "text": "Respawn at entrance (check weather reports first)",
-      "next": "1"
+      "text": "Respawn (check weather reports first)",
+      "next": "5"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "summary": "You plunge the dagger into the hellish eye! The bat dissolves into smoke, leaving behind a charred wing fragment. The path ahead reeks of sulfur... and victory?",
   "choices": [
     {
-      "text": "Proceed to sulfur-scented corridor",
+      "text": "Proceed to sulfur-scented corridor (Coming soon)",
       "next": "99"
     },
     {

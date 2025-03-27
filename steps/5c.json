@@ -2,8 +2,8 @@
   "summary": "Your attempt at echolocation diplomacy results in an accidental declaration of war. The bat's response involves 6-inch fangs and your spleen.",
   "choices": [
     {
-      "text": "Respawn at entrance (and vow to learn Latin properly)",
-      "next": "2"
+      "text": "Respawn (and vow to learn Latin properly)",
+      "next": "5"
     },
     {
       "text": "Demand translator",

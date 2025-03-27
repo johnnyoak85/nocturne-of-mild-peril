@@ -2,8 +2,8 @@
   "summary": "The bat 'translates' your liver into bite-sized pieces",
   "choices": [
     {
-      "text": "Respawn at entrance (and consider enrolling in Bat Duolingo)",
-      "next": "2"
+      "text": "Respawn (and consider enrolling in Bat Duolingo)",
+      "next": "5"
     }
   ]
 }

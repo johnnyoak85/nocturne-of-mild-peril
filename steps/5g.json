@@ -2,7 +2,7 @@
   "summary": "You roll beneath a stone gargoyle as the ceiling collapses. The bat is buried... but so is your exit. A crack in the wall reveals moonlight.",
   "choices": [
     {
-      "text": "Squeeze through crack",
+      "text": "Squeeze through crack (Coming soon)",
       "next": "99"
     }
   ]

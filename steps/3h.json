@@ -3,7 +3,7 @@
   "choices": [
     {
       "text": "Respawn (vow to skip gym day forever)",
-      "next": "2.json"
+      "next": "3"
     }
   ]
 }

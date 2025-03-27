@@ -2,8 +2,8 @@
   "summary": "The bat fang makes a terrible paddle - too heavy and pointy. Spectral piranhas swarm your makeshift canoe, their ghostly teeth shredding both the fang and your last shred of dignity. Dracula's moat security team high-fives in the distance.",
   "choices": [
     {
-      "text": "Respawn at entrance (and vow to stick to land-based travel)",
-      "next": "2"
+      "text": "Respawn (and vow to stick to land-based travel)",
+      "next": "5"
     }
   ]
 }
