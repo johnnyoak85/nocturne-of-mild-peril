@@ -3,65 +3,7 @@
 
 <head>
     <title>Castlevania: Nocturne of Mild Peril</title>
-    <style>
-        body {
-            background-color: #222222;
-            color: #FFD700;
-            font-family: Consolas, Monaco, monospace;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            margin: 0;
-            padding: 20px;
-        }
-
-        #game-container {
-            max-width: 600px;
-            text-align: center;
-        }
-
-        #story-text {
-            white-space: pre-wrap;
-            overflow: hidden;
-            margin: 2rem 0;
-            min-height: 100px;
-            font-size: large;
-            text-align: left;
-        }
-
-        .choice-btn {
-            background: none;
-            border: none;
-            color: #FFD700;
-            padding: 10px;
-            margin: 5px;
-            cursor: pointer;
-            opacity: 0;
-            font-family: Consolas, Monaco, monospace;
-            font-size: medium;
-            transition:
-                opacity 0.5s ease-in-out,
-                background-color 0.3s,
-                color 0.3s;
-        }
-
-        .choice-btn:hover {
-            background: #FFD700;
-            color: #222222;
-        }
-
-        @keyframes typing {
-            from {
-                width: 0
-            }
-
-            to {
-                width: 100%
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -70,73 +12,7 @@
         <div id="story-text"></div>
         <div id="choices"></div>
     </div>
-
-    <script>
-        let currentStep = '1';
-        let typingInterval;
-
-        async function loadStep(stepFile) {
-            try {
-                const response = await fetch(`steps/${stepFile}.json`);
-                console.log(response)
-                const stepData = await response.json();
-
-                // Clear existing content
-                document.getElementById('story-text').innerHTML = '';
-                document.getElementById('choices').innerHTML = '';
-
-                // Start typewriter effect
-                typewriterEffect(stepData.summary, stepData.choices);
-
-            } catch (error) {
-                console.error('Error loading step:', error);
-                document.getElementById('story-text').innerHTML =
-                    'The adventure has hit a snag. Please try again later.';
-            }
-        }
-
-        function typewriterEffect(text, choices) {
-            const storyElement = document.getElementById('story-text');
-            let index = 0;
-
-            // Clear any existing animation
-            clearInterval(typingInterval);
-
-            typingInterval = setInterval(() => {
-                storyElement.innerHTML = text.slice(0, index);
-                index++;
-
-                if (index > text.length) {
-                    clearInterval(typingInterval);
-                    showChoices(choices);
-                }
-            }, 20); // Adjust typing speed here
-        }
-
-        function showChoices(choices) {
-            const choicesContainer = document.getElementById('choices');
-
-            choices.forEach((choice, index) => {
-                const button = document.createElement('button');
-                button.className = 'choice-btn';
-                button.textContent = choice.text;
-                button.style.transitionDelay = `${index * 0.1}s`;
-                button.onclick = () => {
-                    currentStep = choice.next;
-                    loadStep(choice.next);
-                };
-
-                choicesContainer.appendChild(button);
-                // Trigger fade-in
-                setTimeout(() => {
-                    button.style.opacity = '1';
-                }, 75);
-            });
-        }
-
-        // Start the game
-        loadStep(currentStep);
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
