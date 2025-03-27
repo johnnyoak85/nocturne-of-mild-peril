@@ -1,0 +1,13 @@
+{
+  "summary": "You stand at the edge of a dark forest. The trees whisper secrets in a language you almost remember. To your left, a narrow path disappears into shadows. To your right, a faint glimmer dances between ancient oaks.",
+  "choices": [
+    {
+      "text": "Take the left path",
+      "nextStep": "step2a.json"
+    },
+    {
+      "text": "Follow the right glimmer",
+      "nextStep": "step2b.json"
+    }
+  ]
+}

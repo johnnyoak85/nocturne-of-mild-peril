@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Text Adventure</title>
+    <style>
+        body {
+            background-color: #222222;
+            color: #FFD700;
+            font-family: Consolas, Monaco, monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        #game-container {
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .choice-btn {
+            background: #333;
+            border: 1px solid #FFD700;
+            color: #FFD700;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .choice-btn:hover {
+            background: #FFD700;
+            color: #222222;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="game-container">
+        <h1>Text Adventure</h1>
+        <div id="story-text"></div>
+        <div id="choices"></div>
+    </div>
+
+    <script>
+        // Game state
+        let currentStep = 'step1.json';
+
+        // Load game content
+        async function loadStep(stepFile) {
+            try {
+                const response = await fetch(stepFile);
+                const stepData = await response.json();
+
+                document.getElementById('story-text').innerHTML = stepData.summary;
+
+                const choicesContainer = document.getElementById('choices');
+                choicesContainer.innerHTML = '';
+
+                stepData.choices.forEach(choice => {
+                    const button = document.createElement('button');
+                    button.className = 'choice-btn';
+                    button.textContent = choice.text;
+                    button.onclick = () => {
+                        currentStep = choice.nextStep;
+                        loadStep(choice.nextStep);
+                    };
+                    choicesContainer.appendChild(button);
+                });
+            } catch (error) {
+                console.error('Error loading step:', error);
+                document.getElementById('story-text').innerHTML =
+                    'The adventure has hit a snag. Please try again later.';
+            }
+        }
+
+        // Start the game
+        loadStep(currentStep);
+    </script>
+</body>
+
+</html>
